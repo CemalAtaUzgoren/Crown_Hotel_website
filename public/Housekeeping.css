@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    margin: 0%;
+    padding: 0%;
+    background-color: #bcc3b6;
+}
+
+h1{
+    text-align: center;
+    height: 50px;
+    width: 100%;
+}
+
+header{
+    background-color: goldenrod;
+    height: 50px;
+}
+
+body{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background-image: url(/images/Hotel.jpg);
+    background-size: cover;
+}
+
+
+
+.box{
+    display: none;
+}
+
+.showbox{
+    display: block;
+    position: fixed;
+    left: 100px;
+    top: 50px;
+    text-align: center;;
+}
+
+.home{
+    position: fixed;
+    top: 100px;
+    left: 20px;
+    cursor: pointer;
+}
+
+.home:hover{
+    color:black;
+}
+
+.Container{
+    margin: 0 auto;
+    height: 1080px;
+    width: 1080px;
+    border: 1px solid gray;
+    border-radius: 20px;
+}
+
+.title{
+    width: 100%;
+    height: 280px;
+    border-bottom: 1px solid gray;
+    line-height: 280px;
+    text-align: center;
+}
+
+.N{
+    width: 130px;
+    height: 198px;
+    border: 1px solid gray;
+    text-align: center;
+}
+
+.red{
+    background-color: red;
+}
+
+.green{
+    background-color: green;
+}
+
+
+.Number{
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 200px;
+}
+
+.N-text{
+    line-height: 58px;
+    
+}
+
+footer{
+    height: auto;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border: 3px solid  ;
+    border-color:	#D3D3D3;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);/* footer allocated to 5 columns*/
+}
+
+.f_column{
+    text-align: center;
+}
+
+.footer_Headings{
+    font-weight: bold;
+}
+
+.comment_owner{
+    font-size: 12px;
+}
+.tel{
+     text-decoration:underline ;
+}
+
+.fa-brands{
+    margin-left: 20px;
+}
+
+.contact_Button{
+    background-color:goldenrod ;
+    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+}
+.contact_Button a{
+    text-decoration: none;
+    color: black;
+}
+@media only screen and (max-width:768px){
+ 
+  body{
+    width: 768px;
+    font-size: 12px;
+    height: 950px;
+  }
+  header{
+    background-color: goldenrod;
+    width: 100%;
+  }
+  h1{
+    width: 100%;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+  }
+  .Container{
+    width: 608px;
+    height: 810px;
+    border-radius: 3px;
+    margin-top: 20px;
+  }
+
+.N{
+  width: 74px;
+  height: 150px;
+  line-height: 150px;
+  border: 1px solid gray;
+  text-align: center;
+}
+.title{
+  width: 100%;
+  height: 200px;
+  border-bottom: 1px solid gray;
+  line-height: 200px;
+}
+.F{
+  margin-left: 50px;
+  margin-right: 300px;
+}
+footer{
+  position: fixed;
+  bottom: 0;
+}
+}

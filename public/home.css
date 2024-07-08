@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family:sans-serif;
+}
+
+html {
+    /* background-color: #bcc3b6; */
+    background-image: url(images/autumn_banner_main_page.jpg);
+    background-size: cover;
+}
+
+header {
+    font: bold;
+    height: auto;
+}
+
+header p {
+    display:block;
+    text-align: center;
+    font-size: medium;
+    font: bold;
+    padding: 5px;
+    height: 100%;
+}
+
+header div {
+    display: flex;
+    padding: 0 10px 10px;
+    height: 100%;
+}
+
+.h1 {
+    width: 33%;
+    line-height: 100%;
+    display: block;
+    padding: 7px;
+    position:relative;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.h3 {
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+header input {
+    padding:5px;
+    width: 95%;
+    border-radius: 10px;
+    border-color: black;  
+    display: flex;  
+}
+
+.login {
+    float: right;
+    list-style-type: none;
+    display: flex;
+    padding: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: black
+        
+}
+
+a:link a:visited {
+    color:#3F2860;}
+
+nav a:hover {
+    background-color:goldenrod;
+    font-size: larger;
+    /* background-clip:content-box, padding-box, border-box; */
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav {
+    display: block;
+    padding: 15px;
+}
+
+.nav {
+    display: inline-block;
+    text-align: center;
+    padding: 5px 15px;
+     
+}
+
+.active {
+    border-bottom: 2px solid #573A56;
+    font-weight: bold;
+}
+
+#chat {
+    position: fixed;
+    margin-left: 92%;
+    margin-top: 5%;
+}
+
+#chat a:hover {
+    font-size: larger;
+}
+
+main section {
+    margin: auto 10%;
+    padding: 16px;
+    border: 2px solid white;
+    border-radius: 20px;
+    background-color: #bcc3b6;
+}
+
+
+aside {
+    float: right;
+    text-align: center;
+    color: #573A56;
+
+}
+
+
+#desc {
+    text-transform: capitalize;
+}
+
+section div{
+    padding: 1% 0.3%;
+    margin: 0.5%;    
+    display: inline-block;
+    width:23%;
+    flex-wrap: wrap;
+    height:fit-content;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+figure {
+    margin: 0;
+}
+
+.browse {
+    float: right;
+}
+
+.browse a:hover {
+    background-color: goldenrod;
+}
+
+button {
+    display: inline-block;
+    background-color: #B8195A;
+    color: white;
+    text-transform: uppercase;
+    padding: 6px 10px;
+    font-weight: 700;
+    font-size: 16px;
+    Border: 2px solid #B8195A;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#results {
+    margin: 5px;
+    padding: 5px;
+    color:#573A56;
+
+}
+
+.media {
+    display: flex;
+    list-style-type: none;
+}
+
+footer{
+    padding: 10px 20px;
+    margin: 2% auto auto;
+    height: auto;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border: 3px solid  ;
+    border-color:white;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);/* footer allocated to 5 columns*/
+}
+
+.f_column{
+    text-align: center;
+}
+
+.footer_Headings{
+    font-weight: bold;
+}
+
+.comment_owner{
+    font-size: 12px;
+}
+.tel{
+     text-decoration:underline ;
+}
+
+.fa-brands{
+    margin-left: 20px;
+}
+
+.contact_Button{
+    background-color:goldenrod;
+    border-color:goldenrod;
+    border-radius: 5px;
+    width: 130px;
+    height: 30px;
+}
+
+.contact_Button a{
+    text-decoration: none;
+    color: black;
+}
+
+
+fieldset {
+    border: none;
+
+}
+
+form input {
+    border-radius: 5px;
+    border: black solid;
+    padding: 5px;
+    margin: 5px;
+}
+
+.qty {
+    width: 30px;
+ 
+}
+
+
+@media only screen and (max-width:768px) {
+    html {
+        background-size:auto;
+    }
+
+    header {
+        font-size:small;
+    }
+
+    #login {
+        display: none;
+    }
+
+    .mainNav{
+        height: 0;
+        overflow:hidden;
+    }
+
+    .showNav{
+        height: 30px;
+        background-color: #bcc3b6;
+    }
+
+    section div{
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+    }
+
+    form input {
+        border-radius: 5px;
+        border: black solid;
+        padding: 5px;
+        margin: 5px;
+        display: block;
+    }
+
+    p {
+        clear: right;
+    }
+
+    .f_column{
+        font: 5px;
+    }
+}

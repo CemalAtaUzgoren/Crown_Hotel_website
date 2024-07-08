@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+         <title>Payment Page</title>
+         <meta charset="utf-8">
+         <link rel="stylesheet" href="Payment_card.css">
+         <script src="https://kit.fontawesome.com/67bd86ffdc.js" crossorigin="anonymous"></script>
+         
+        </head>
+    <body>
+        <header>
+
+           <div class="heading_basket">
+            <h1>Crown Hotel (Payment <i class="fa-regular fa-credit-card" style="color: #d29d00;"></i>)</h1>
+            <a href="Home.html" class="home">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to Home Page
+            </a>
+            <a href="booking_card.html" class="home">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to My Basket
+            </a>
+          </div>
+
+          <div class="account_heading">
+            <a href="Logincus.html" class="id">
+                <i class="fa-solid fa-address-card" style="color: #d29d00;"></i> My Account
+            </a>
+          </div>
+        </header>
+
+        <main>
+            <div class="room_sum">
+                <div class="innerDiv1">
+                    <div>
+                        <img id="img1" class="roomPictures" src="" alt="">
+                    </div>
+                    <div>
+                        <p id="p1" class="roomInfo"></p>
+                        <p id="breakfast1" class="extraInfo"></p>
+                        <p id="dinner1" class="extraInfo"></p>
+                        <p id="lunch1" class="extraInfo"></p>
+                    </div>
+                    <div class="qtyDiv">
+                        <p id="p2"></p>
+                    </div>
+                    <div class="dates">
+                        <p id="p4_in"></p>
+                        <p id="p4_out"></p>
+                    </div>
+                    <div class="qtyDiv">
+                        <p id="p3"></p>
+                       
+                    </div>
+                </div>
+
+                <div class="innerDiv2">
+                    <div>
+                        <img id="img2" class="roomPictures" src="" alt="">
+                    </div>
+                    <div>
+                        <p id="p12" class="roomInfo"></p>
+                        <p id="breakfast2" class="extraInfo"></p>
+                        <p id="dinner2" class="extraInfo"></p>
+                        <p id="lunch2" class="extraInfo"></p>
+                    </div>
+                    <div class="qtyDiv">
+                        <p id="p22"></p>
+                    </div>
+                    <div class="dates">
+                        <p id="p42_in"></p>
+                        <p id="p42_out"></p>
+                    </div>
+                    <div class="qtyDiv">
+                        <p id="p32"></p>
+                        
+                    </div>
+                </div>
+
+                <div class="innerDiv3">
+                    <div>
+                        <img id="img3" class="roomPictures" src="" alt="">
+                    </div>
+                    <div>
+                        <p id="p13" class="roomInfo"></p>
+                        <p id="breakfast3" class="extraInfo"></p>
+                        <p id="dinner3" class="extraInfo"></p>
+                        <p id="lunch3" class="extraInfo"></p>
+                    </div>
+                    <div class="qtyDiv">
+                        <p id="p23"></p>
+                    </div>
+                    <div class="dates">
+                        <p id="p43_in"></p>
+                        <p id="p43_out"></p>
+                    </div>
+                    <div class="qtyDiv">
+                        <p id="p33"></p>
+                        
+                    </div>
+                </div>
+
+                <div class="innerDiv4">
+                    <div>
+                        <img id="img4" class="roomPictures" src="" alt="">
+                    </div>
+                    <div>
+                        <p id="p14" class="roomInfo"></p>
+                        <p id="breakfast4" class="extraInfo"></p>
+                        <p id="dinner4" class="extraInfo"></p>
+                        <p id="lunch4" class="extraInfo"></p>
+                    </div>
+                    <div class="qtyDiv">
+                        <p id="p24"></p>
+                    </div>
+                    <div class="dates">
+                        <p id="p44_in"></p>
+                        <p id="p44_out"></p>
+                    </div>
+                    <div class="qtyDiv">
+                        <p id="p34"></p>
+                    </div>
+                </div>
+
+               
+
+                <div class="payment_div">
+                    <form action="/payment_card.html" method="post" class="payment_info">
+
+                        <div class="card_heading"><h4>CUSTOMER INFO</h4></div>
+                        <div class="Name">
+                            <input type="type" class="card_num" name="name" placeholder="Full Name">   
+                        </div>
+                        <div class="Email">
+                            <input type="text" class="card_num" name="email" placeholder="Email">  
+                        </div>
+                        <div class="Address">
+                            <input type="text" class="card_num" name="address" placeholder="Address">
+                        </div>
+                        
+
+                        <div class="card_heading">
+                            <h4>
+                                CARD DETAILS <i class="fa-brands fa-cc-visa"></i>
+                                <input type="radio" name="cardType" id="visa" value="V" required>
+
+                                <i class="fa-brands fa-cc-mastercard"></i>
+                                <input type="radio" name="cardType" id="master" value="MC" required>
+
+                                <i class="fa-brands fa-cc-amex"></i>
+                                <input type="radio" name="cardType" id="amex" value="A" required>
+                            </h4>
+                        </div>
+                        
+
+                        <div class="card_body">
+                            <input type="number" class="card_num" name="cardNumber" placeholder="Card Number" required>
+                            <div class="date">
+                                <div class="month">
+                                    <select name="Month" id="month_id" required>
+                                        <option value="" disabled selected hidden>Choose Month</option>
+                                        <option value="01">January</option>
+                                        <option value="02">February</option>
+                                        <option value="03">March</option>
+                                        <option value="04">April</option>
+                                        <option value="05">May</option>
+                                        <option value="06">June</option>
+                                        <option value="07">July</option>
+                                        <option value="08">August</option>
+                                        <option value="09">September</option>
+                                        <option value="10">October</option>
+                                        <option value="11">November</option>
+                                        <option value="12">December</option>
+                                    </select>
+                                </div>
+                                <div class="year">
+                                    <select name="Year" id="year_id" placeholder="Year" required>
+                                        <option value="" disabled selected hidden>Choose Year</option>
+                                        <option value="16">2016</option>
+                                        <option value="17">2017</option>
+                                        <option value="18">2018</option>
+                                        <option value="19">2019</option>
+                                        <option value="20">2020</option>
+                                        <option value="21">2021</option>
+                                        <option value="22">2022</option>
+                                        <option value="23">2023</option>
+                                        <option value="24">2024</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="cvv">
+                                <div class="cvv_input">
+                                    <input type="number"  name="cvv" placeholder="CVV" class="cvv_i" required>  
+                                    <input type="submit" name="submit" class="paymentSubmit" value="Complete Booking" onclick="
+                                      const cartobject=JSON.parse(localStorage.getItem('cartobject'));
+                                      cartobject[0].price+=(parseFloat(localStorage.getItem('extrasPrice')))
+                                      cartobject[1].price+=(parseFloat(localStorage.getItem('extrasPrice2')))
+                                      cartobject[2].price+=(parseFloat(localStorage.getItem('extrasPrice3')))
+                                      cartobject[3].price+=(parseFloat(localStorage.getItem('extrasPrice4')))
+                                       
+                                       post(cartobject);
+                                       localStorage.setItem('paymentobject', JSON.stringify(cartobject));
+                                       
+                                    ">  
+                                </div>
+                                
+                              </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="total_cost">
+              <div>
+                    <p class="cost"> TOTAL COST : </p>
+                    <p class="num_cost">£0/Night</p>
+              </div>
+            </div>
+        </main>
+
+        <footer>
+           <div class="f_column">
+            <p class="footer_Headings">Our Rating</p> 
+            <p>
+                <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+                <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+                <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+                <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+                <i class="fa-solid fa-star-half-stroke" style="color: #d29d00;"></i>
+            </p>
+            <p> Based on 2303 views</p>
+           </div>
+
+           <div class="f_column">
+            <p>
+                <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+                <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+                <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+                <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+                <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+            </p>
+            <p class="footer_Headings">Great Quality and Value</p>
+            <p>Comfortable bed, great staff, proximate to the hospital, will stay here again</p>
+            <p class="comment_owner">John doe, 6 days ago</p>
+           </div>
+
+           <div class="f_column">
+            <p>
+                <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+                <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+                <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+                <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+                <i class="fa-regular fa-star" style="color: #d29d00;"></i>
+            </p>
+            <p class="footer_Headings">Beautiful Design</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nulla quam velit...</p>
+            <p class="comment_owner">Travis Cooper, 8 days ago</p>
+           </div>
+
+           <div class="f_column">
+            <p class="footer_Headings">Our Location</p>
+            <p>University of East Anglia
+                Norwich Research Park 
+                Norwich
+                NR4 7TJ Tel:</p>
+            <p class="tel">Tel: +44 (0)1603 456161</p>
+           </div>
+
+           <div class="f_column">
+            <p>
+                <i class="fa-brands fa-instagram" style="color: #d29d00;"></i>
+                <i class="fa-brands fa-youtube" style="color: #d29d00;"></i>
+                <i class="fa-brands fa-facebook" style="color: #d29d00;"></i>
+                <i class="fa-brands fa-x-twitter" style="color: #d29d00;"></i>
+            </p>
+            <p class="footer_Headings">Need Help?</p>
+
+            <button class="contact_Button">
+                <a href="contact.html">Contact us</a>
+            </button>
+
+           </div>
+        </footer>
+
+        <script>
+
+            function post (object){
+                const stringifyObject=JSON.stringify(object);
+                const options ={
+                    method:'POST',
+                    headers:{'content-type' : 'application/json'},
+                    body:stringifyObject
+                }
+                fetch('/booking_card.html',options)
+                .then(response => response.json())
+                .then(data => console.log(data))
+            } 
+         
+            
+            addEventListener('DOMContentLoaded',function(){
+                const objectShared=JSON.parse(localStorage.getItem('cartobject'));
+                 console.log(objectShared)
+
+                 const meal=document.getElementsByClassName('extraInfo');
+                console.log(meal)
+                for(let k=0;k<meal.length;k++){
+                    if(JSON.parse(localStorage.getItem('counter'))[k]%2===0){
+                                console.log('in')
+                                if(k%3===1){
+                                    meal[k].innerHTML='Dinner:Included'
+                                }
+                                if(k%3===2){
+                                    meal[k].innerHTML='Lunch:Included'
+                                }
+                                if(k%3===0){
+                                    meal[k].innerHTML='Breakfast:Included'
+                                }
+                            
+                             }
+                }
+
+            var sum=0;
+            if(objectShared[0].qty!==0){
+                try{
+                   const photo1=objectShared[0].img;
+                   const info1=objectShared[0].name;
+                   const price1=objectShared[0].price+(parseFloat(localStorage.getItem('extrasPrice')));
+                   const quantity1=objectShared[0].qty;
+                   const date_in =objectShared[0].checkin;
+                   const date_out = objectShared[0].checkout;
+
+                    const div1=document.querySelector('.innerDiv1');
+                    // console.log(div1)
+                    div1.classList.add('innerDiv0');
+                    div1.classList.remove('innerDiv1');
+
+                    document.getElementById('img1').src=photo1;
+                    document.getElementById('p1').innerHTML=info1;
+                    document.getElementById('p2').innerHTML=`Quantity ${quantity1}`;
+                    document.getElementById('p3').innerHTML=`Price: ${price1} £/Night`;
+                    document.getElementById('p4_in').innerHTML=`Check-in date \n${date_in} \n`;
+                    document.getElementById('p4_out').innerHTML=`Check-out date \n${date_out} \n`;
+                    sum+=(price1*quantity1);
+                 
+                }catch{
+                    console.log('You have not booked this room')
+                }
+            }
+             if(objectShared[1].qty!==0){
+                
+                try{
+                    const photo12=objectShared[1].img;
+                    const info12=objectShared[1].name;
+                    const price12=objectShared[1].price+(parseFloat(localStorage.getItem('extrasPrice2')));
+                    const quantity12=objectShared[1].qty;
+                    const date_in12 =objectShared[1].checkin;
+                    const date_out12 = objectShared[1].checkout;
+
+                    const div1=document.querySelector('.innerDiv2');
+                    div1.classList.add('innerDiv0');
+                    div1.classList.remove('innerDiv2');
+                    document.getElementById('img2').src=photo12;
+                    document.getElementById('p12').innerHTML=info12;
+                    document.getElementById('p22').innerHTML=`Quantity ${quantity12}`;
+                    document.getElementById('p32').innerHTML=`Price: ${price12} £/Night`;
+                    document.getElementById('p42_in').innerHTML=`Check-in date \n${date_in12} \n`;
+                    document.getElementById('p42_out').innerHTML=`Check-out date \n${date_out12} \n`;
+                    sum+=(price12*quantity12);
+                }catch{
+                    console.log('You have not booked this room')
+                }
+            }
+             if(objectShared[2].qty!==0){
+                    
+                try{
+                    const photo13=objectShared[2].img;
+                    const info13=objectShared[2].name;
+                    const price13=objectShared[2].price+(parseFloat(localStorage.getItem('extrasPrice3')));
+                    const quantity13=objectShared[2].qty;
+                    const date_in13 =objectShared[2].checkin;
+                    const date_out13 = objectShared[2].checkout;
+                    const div1=document.querySelector('.innerDiv3');
+                    div1.classList.add('innerDiv0');
+                    div1.classList.remove('innerDiv3');
+                    document.getElementById('img3').src=photo13;
+                    document.getElementById('p13').innerHTML=info13;
+                    document.getElementById('p23').innerHTML=`Quantity ${quantity13}`;
+                    document.getElementById('p33').innerHTML=`Price: ${price13} £/Night`;
+                    document.getElementById('p43_in').innerHTML=`Check-in date \n${date_in13} \n`;
+                    document.getElementById('p43_out').innerHTML=`Check-out date \n${date_out13} \n`;
+                    sum+=(price13*quantity13);
+                }catch{
+                    console.log('You have not booked this room')
+                }
+
+                const objectShared4=JSON.parse(localStorage.getItem('sharedData4'));
+            }
+             if(objectShared[3].qty!==0){
+              
+               try{
+                    const photo14=objectShared[3].img;
+                    const info14=objectShared[3].name;
+                    const price14=objectShared[3].price+(parseFloat(localStorage.getItem('extrasPrice4')));
+                    const quantity14=objectShared[3].qty;
+                    const date_in14 =objectShared[3].checkin;
+                    const date_out14 = objectShared[3].checkout;
+                    const div1=document.querySelector('.innerDiv4');
+                    div1.classList.add('innerDiv0');
+                    div1.classList.remove('innerDiv4');
+                    document.getElementById('img4').src=photo14;
+                    document.getElementById('p14').innerHTML=info14;
+                    document.getElementById('p24').innerHTML=`Quantity ${quantity14}`;
+                    document.getElementById('p34').innerHTML=`Price: ${price14} £/Night`;
+                    document.getElementById('p44_in').innerHTML=`Check-in date \n${date_in14} \n`;
+                    document.getElementById('p44_out').innerHTML=`Check-out date \n${date_out14} \n`;
+                    sum+=(price14*quantity14);
+                }catch{
+                    console.log('You have not booked this room')
+                }
+            }
+               
+                const total=document.querySelector('.num_cost')
+                total.innerHTML=` £${sum}/Night`;
+
+                const firstdate = new Date(objectShared[0].checkin);
+                const lastdate =new Date(objectShared[0].checkout);
+                const b_cost = sum*(lastdate-firstdate)/(1000 * 60 * 60 * 24);
+                console.log(b_cost);
+                localStorage.setItem('b_cost', b_cost);
+                
+              }
+               
+            )
+
+           
+         </script>
+
+
+    </body>
+</html>

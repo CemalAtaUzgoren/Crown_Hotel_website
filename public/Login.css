@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.nav{
+    display: inline-block;
+    padding: 24px;
+}
+
+nav{
+    height: 100px;
+    padding: 8px;
+    text-align: center;
+}
+
+#mainNav{
+    border-bottom: 2px solid gray;
+}
+
+.Account{
+    position: fixed;
+    top: 50px;
+    right: 50px;
+}
+
+html{
+    background-color: #bcc3b6;
+}
+
+h1{
+    text-align: center;
+    height: auto;
+    width: 100%;
+}
+
+header{
+    background-color: goldenrod;
+    height: auto;
+}
+
+body{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background-image: url(images/Hotel.jpg);
+    background-size: cover;
+    height: 720px;
+}
+
+.log{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p{
+    color: black;
+}
+
+h2{
+    color: red;
+}
+
+.email{
+    width: 450px;
+    height: 300px;
+    margin: 0 auto;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+input {
+    display: block;
+    width: 80%;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #573A56;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.account{
+    width: 440px;
+    padding-top: 10px;
+    padding-left: 100px;
+    padding-bottom: 10px;
+    height: 20px;
+    margin-top: 10px;
+}
+
+.password{
+    width: 440px;
+    padding-top: 10px;
+    padding-left: 100px;
+    padding-bottom: 10px;
+    height: 20px;
+}
+
+.forgot{
+    text-decoration: underline;
+    color: gray;
+    width: 440px;
+    padding-left: 20px;
+}
+
+.BL{
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 150px;
+    padding-right: 150px;
+    font-weight: 700;
+    font-size: 16px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.new{
+    display: block;
+    background-color: white;
+    color: black;
+    padding: 6px 140px;
+    font-weight: 700;
+    font-size: 15px;
+    margin-left: 50px;
+}
+main{
+  margin-top: 100px;
+}
+footer{
+    height: auto;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border: 3px solid  ;
+    border-color:	#D3D3D3;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);/* footer allocated to 5 columns*/
+    margin-top: 100px;
+    position: fixed;
+    bottom: 0;
+}
+
+.f_column{
+    text-align: center;
+}
+
+.footer_Headings{
+    font-weight: bold;
+}
+
+.comment_owner{
+    font-size: 12px;
+}
+.tel{
+    text-decoration:underline ;
+}
+
+.fa-brands{
+    margin-left: 20px;
+}
+
+.contact_Button{
+    background-color:goldenrod ;
+    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+}
+.contact_Button a{
+    text-decoration: none;
+    color: black;
+}
+@media only screen and (max-width:768px){
+  body{
+    width: 768px;
+    font-size: 12px;
+    height: 1000px;
+  }
+
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reception.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="./jquery.js"></script>
+
+    <title>Reception</title>
+</head>
+<body style="position: relative;"> 
+    <div class="reception-container">
+        <div class="reception">
+            <div class="reception-header">Hotel Reception</div>
+            <div class="reception-content">
+                <div class="reception-search">
+                    <form>
+                    <input  id="reception-search-input" placeholder="please input customer or email or booking "  onblur="getTableData()" >
+                    </input>
+                    </form>
+                </div>
+                <table class="reception-table" style="width: 100%;">
+                    <!-- 设置table表头 -->
+                    <thead style="background-color: rgb(238, 238, 238);width: 100%;">
+                        <tr>
+                            <th scope="col">Customer</th>
+                            <th scope="col">Room Number</th>
+                            <th scope="col">Booking Number</th>
+                            <th scope="col">Email Number</th>
+                            <th scope="col">Check in Date</th>
+                            <th scope="col">Check out Date</th>
+                            <th scope="col">Total Price</th>
+                            <th scope="col">Room Type</th>
+                            <th scope="col">Handle</th>
+                        </tr>
+                    </thead>
+                    <tbody id="reception-tbody" style="height: 100%;background-color: rgb(238, 238, 238)">
+                    </tbody>
+                </table>
+                <div class="reception-pagination">
+                    <ul id="recepiton-pagination-ul">
+
+                    </ul>
+                </div>
+                <!-- <el-table :data="tableData.slice((currentPage-1)*pageSize,currentPage*pageSize)" style="width: 100%" empty-text="No Data"  max-height="650">
+                    <el-table-column prop="c_name" label="Customer" align="center">
+                    </el-table-column>
+                    <el-table-column prop="r_no" label="Room Number" align="center">
+                    </el-table-column>
+                    <el-table-column prop="b_ref" label="Booking Number" align="center" width="150px">
+                    </el-table-column>
+                    <el-table-column prop="c_email" label="Email Number" align="center">
+                    </el-table-column>
+                    <el-table-column prop="checkin" label="Check in Date" align="center">
+                        <template slot-scope="scope">
+                            <span>{{scope.row.checkin.split('T')[0]}}</span>
+                        </template>
+                    </el-table-column>
+                    <el-table-column prop="checkout" label="Check out Date" align="center" >
+                        <template slot-scope="scope">
+                            <span>{{scope.row.checkout.split('T')[0]}}</span>
+                        </template>
+                    </el-table-column>
+                    <el-table-column prop="b_cost" label="Totle Price" align="center">
+                        <template slot-scope="scope">
+                            <span>{{`￡${scope.row.b_cost}`}}</span>
+                        </template>
+                    </el-table-column>
+                    <el-table-column prop="r_class" label="Room Type" align="center">
+                    </el-table-column>
+                    <el-table-column prop="handle" label="Handle" align="center" width="200px">
+                        <template slot-scope="scope">
+                            <el-button v-if="!scope.row.is_check" type="text" size="small" @click="clickModal('Check In',scope.row)">Check In</el-button>
+                            <el-button v-if="scope.row.is_check" type="text" size="small" style="color: brown;" @click="clickModal('Check Out',scope.row)">Check Out</el-button>
+                        </template>
+                 
+                    </el-table-column>
+                </el-table> -->
+                <!-- <el-pagination
+                    @current-change="handleCurrentChange"
+                    :current-page="currentPage"
+                    :page-sizes="[20, 50, 100]"
+                    :page-size="20"
+                    layout="total, prev, pager, next, jumper"
+                    :total="total">
+                </el-pagination> -->
+            </div>
+        </div>
+
+
+    </div>
+    <div id="checkinDialog" class="reception-dialog" style="width: 40%;">
+        <div class="dialog-header"> Check In</div>
+        <div class="dialog-content"> Confirm Check In!</div>
+        <div class="dialog-btn">
+            <button onclick="closeModal('checkIn')" > Confirm</button>
+        </div>
+      
+    </div> 
+    <div id="checkoutDialog" class="reception-dialog" style="width: 40%;">
+        <div class="dialog-header"> Check Out</div>
+
+        <div class="dialog-content"> 
+            <div>         Confirm Check Out!</div>
+   
+            <div id="dialog-price"></div>
+        </div>
+        
+        <div class="dialog-btn">
+            <button  onclick="closeModal('checkOut')" > Confirm</button>
+        </div>
+
+    </div> 
+    <script src="reception.js"></script>
+</body>
+</html>

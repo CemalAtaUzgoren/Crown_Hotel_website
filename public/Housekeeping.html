@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Housekeeping</title>
+    <link rel="stylesheet" href="Housekeeping.css">
+    <script src="https://kit.fontawesome.com/07c22d3770.js" crossorigin="anonymous"></script>
+    <script src="Changecolor.js" defer></script>
+    
+	
+	<script>
+		
+		function queryParse(query){
+			let queryText = "";
+			for(let key in query){	
+				queryText += `${key}=${query[key]}&`;
+			}
+			return queryText.slice(0,-1);
+		}
+		
+		
+		
+	
+		function func(){
+			
+			
+			var url = "/getRoomStatus";
+			fetch(url, {
+			  method: "GET",
+			  headers: {
+			      "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+			  }
+			  	  
+			}).then(function(res) {
+			  if (res.status === 200) {
+			      return res.json()
+			  } else {
+			      return Promise.reject(res.json())
+			  }
+			}).then(function(data) {
+			  console.log(data);
+			  
+			for (let key in data) {
+				var a = data[key];  
+				
+			  
+			var id = key;
+			var div = document.createElement('div');
+			div.setAttribute('id', id);
+			div.addEventListener('click', Changecolor);
+                if(a === 'A' || a === 'C'){
+                    div.setAttribute('class', "N green");
+                }else{
+                    div.setAttribute('class', "N red");
+                }
+                
+			  
+			var span = document.createElement('span');
+			span.setAttribute('class', "N-text");
+			span.setAttribute('value', id);
+				 
+			var textnode = document.createTextNode(id);
+			span.appendChild(textnode);
+			
+			div.appendChild(span);
+			
+			document.getElementById("roomlist").appendChild(div);
+			
+			}
+			  
+			 
+			  
+			}).catch(function(err) {
+			  console.log(err);
+			  alert("GetRoomStatus failed.");
+			});
+			
+		}
+	</script>
+</head>
+<body onload="func()">
+    <header>
+        <h1>Housekeeping</h1>
+    </header>
+<main class="Container">
+    <div class="title">
+        Room Number
+    </div>
+    <div id="roomlist" class="Number">
+		
+       
+    </div>
+</main>
+</body>
+<footer>
+    <div class="f_column">
+     <p class="footer_Headings">Our Rating</p> 
+     <p>
+         <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+         <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+         <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+         <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+         <i class="fa-solid fa-star-half-stroke" style="color: #d29d00;"></i>
+     </p>
+     <p> Based on 2303 views</p>
+    </div>
+
+    <div class="f_column">
+     <p>
+         <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+         <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+         <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+         <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+         <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+     </p>
+     <p class="footer_Headings">Great Quality and Value</p>
+     <p>Comfortable bed, great staff, proximate to the hospital, will stay here again</p>
+     <p class="comment_owner">John doe, 6 days ago</p>
+    </div>
+
+    <div class="f_column">
+     <p>
+         <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+         <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+         <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+         <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+         <i class="fa-regular fa-star" style="color: #d29d00;"></i>
+     </p>
+     <p class="footer_Headings">Beautiful Design</p>
+     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+         Nulla quam velit...</p>
+     <p class="comment_owner">Travis Cooper, 8 days ago</p>
+    </div>
+
+    <div class="f_column">
+     <p class="footer_Headings">Our Location</p>
+     <p>University of East Anglia
+         Norwich Research Park 
+         Norwich
+         NR4 7TJ Tel:</p>
+     <p class="tel">Tel: +44 (0)1603 456161</p>
+    </div>
+
+    <div class="f_column">
+     <p>
+         <i class="fa-brands fa-instagram" style="color: #d29d00;"></i>
+         <i class="fa-brands fa-youtube" style="color: #d29d00;"></i>
+         <i class="fa-brands fa-facebook" style="color: #d29d00;"></i>
+         <i class="fa-brands fa-x-twitter" style="color: #d29d00;"></i>
+     </p>
+     <p class="footer_Headings">Need Help?</p>
+
+     <button class="contact_Button">
+         <a href="mailto:maxinyu8@sina.com">Contact us</a>
+     </button>
+
+    </div>
+ </footer>
+</html>

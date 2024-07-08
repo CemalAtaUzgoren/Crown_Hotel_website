@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.nav{
+    display: inline-block;
+    padding: 24px;
+}
+
+nav{
+    height: 100px;
+    padding: 8px;
+    text-align: center;
+}
+
+#mainNav{
+    border-bottom: 2px solid gray;
+}
+
+.Account{
+    position: fixed;
+    top: 50px;
+    right: 50px;
+}
+
+h1{
+    text-align: center;
+}
+
+header{
+    background-color: goldenrod;
+}
+
+body{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background-image: url(images/Hotel.jpg);
+    background-size: cover;
+}
+
+.TY{
+    text-align: center;
+}
+
+
+.check{
+    width: 500px;
+    height: 250px;
+    margin: 0 auto;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 20px;
+}
+
+.yes{
+    padding-left: 10px;
+    padding-top: 60px;    
+}
+
+.order{
+    margin-left: 50px;
+    width: 350px;
+    margin-top: 10px;
+}
+
+.visit{
+    width: 350px;
+    margin-left: 88px;
+}
+
+button {
+    display: inline-block;
+    background-color: #B8195A;
+    color: white;
+    text-transform: uppercase;
+    padding: 2px 10px;
+    font-size: 16px;
+    Border: 2px solid #B8195A;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 200px;
+}
+
+h2{
+    text-align: center;
+    padding: 5px;
+}
+
+
+.book{
+    width: 400px;
+    height: auto;
+    margin: 10px auto;
+    background-color: white;
+    display: inline-block;
+    border-bottom: 1px solid gray;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px 20px;
+
+}
+
+.room {
+    display: inline-block;
+    padding: 10px;
+}
+
+.col {
+    display: block;
+    margin: 20px;
+}
+
+.total{
+    text-align: center;
+    width: 450px;
+    height: auto;
+    margin: 10px auto;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid gray;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+footer{
+    height: auto;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border: 3px solid  ;
+    border-color:	#D3D3D3;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);/* footer allocated to 5 columns*/
+    margin-top: 100px;
+}
+
+.f_column{
+    text-align: center;
+}
+
+.footer_Headings{
+    font-weight: bold;
+}
+
+.comment_owner{
+    font-size: 12px;
+}
+.tel{
+    text-decoration:underline ;
+}
+
+.fa-brands{
+    margin-left: 20px;
+}
+
+.contact_Button{
+    background-color:goldenrod ;
+    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+}
+.contact_Button a{
+    text-decoration: none;
+    color: black;
+}

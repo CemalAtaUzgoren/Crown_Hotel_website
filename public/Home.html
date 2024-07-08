@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crown Hotel</title>
+    <link rel="stylesheet" href="home.css">
+    <script src="https://kit.fontawesome.com/f8404fde77.js" crossorigin="anonymous"></script>
+    <script src="home.js" defer></script>
+    <script src="chevron.js" defer></script>
+    </head>
+<body>
+    <div id="wrapper"></div>
+    <header>
+        <p>Welcome to Crown Hotel! No booking fees. Booking with us today!</p>
+        <div>
+            <div class="h1">Crown Hotel
+                <a id="chevron">
+                    <i class="fa-solid fa-circle-chevron-right"></i>
+                </a>
+            </div>
+            <div class="h1">
+            <fieldset>
+            <form>
+                <label for="search"></label>
+                <input type="search" name="search" id="search" placeholder="Search">
+            </form>
+            </fieldset>
+            </div>
+            <div class="h1">
+                <ul class="login">
+                    <li id="loginicon"><a href="logincus.html"><i class="fa-regular fa-user"></i></a></li>
+                    <li id="login"><a href="logincus.html"><small>Login</small></a></li>
+                    <li><a href="booking_card.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                </ul> 
+            </div>
+        </div>        
+    </header>
+
+    <nav id="mainNav">        
+        <ul class="mainNav">
+            <li class="nav active"><a href="Home.html">Home</a></li>
+            <li class="nav"><a href="Rooms.html">Our Rooms</a></li>
+            <li class="nav"><a href="Facilities.html">Our Facilities</a></li>
+            <li class="nav"><a href="Contact.html">Our Location</a></li>
+        </ul>
+    </nav>
+
+    <h1 id="chat">
+        <a href="contact.html" title="Contact Us"><i class="fa-solid fa-comment"></i></a>
+    </h1>   
+   
+    <main>
+        <section>
+            <h3>Best Hotel in Norwich</h3>
+            <aside class="weather">
+                <span>Current Weather in Norwich:</span><br>
+                <span id="desc"></span>
+                <span id="temp"></span>&#x2103;
+            </aside>                  
+            <p><br></p>
+            <p>Situated in the western edge of Norwich<br>Close to the hospital and research park</p>
+            <p><br></p>
+            <form id="booking" action="http://localhost:3000/booking" method="POST">
+            <fieldset>
+                <label for="checkin">Check-in Date:</label>
+                <input type="date" name="checkin" id="checkin" value="2024-10-06" required>
+                <label for="checkout">Check-Out Date:</label>
+                <input type="date" name="checkout" id="checkout" value="2024-10-09" required>
+                <label for="guest">Guest:</label>
+                <input type="number" class="qty" name="guest" id="guest" value="1" placeholder="1" min="1" max="2" required>
+                <label for="room">Room:</label>
+                <input type="number" class="qty" name="room" id="room" value="1" placeholder="1" min="1" required>
+                <button type="submit">Book Now</button>
+                <p id="results"></p>
+            </fieldset>
+            </form>
+        </section>
+
+        <section  class="Rooms">
+            <h3>Our Rooms
+            <p class="browse"><a href="Rooms.html"><small>Browse All Our Rooms</small></a></p>
+            </h3>
+            <div>
+                <figure>
+                    <img src="images/Double_standard_room.webp" alt="">
+                    <figcaption>
+                        <h4>Double Standard Room</h4>
+                    </figcaption>
+                </figure> 
+            </div>
+            <div>
+                <figure>
+                    <img src="images/Double_superior_room.webp" alt="">
+                    <figcaption>
+                        <h4>Double Superior Room</h4>
+                    </figcaption>
+                </figure> 
+            </div>
+            <div>
+                <figure>
+                    <img src="images/Twin_standard_room.webp" alt="">
+                    <figcaption>
+                        <h4>Twin Standard Room</h4>
+                    </figcaption>
+                </figure> 
+            </div>
+            <div>
+                <figure>
+                    <img src="images/Twin_Superior_Rooom.webp" alt="">
+                    <figcaption>
+                        <h4>Twin Superior Room</h4>
+                    </figcaption>
+                </figure> 
+            </div>
+        </section>
+        <section class="Facility">
+            <h3>Our Facilities
+            <p class="browse"><a href="Facilities.html"><small>Browse All Our Facilities</small></a></p>
+            </h3>
+            <div>
+                <figure>
+                    <img src="images/Restaurant.webp" alt="">
+                    <figcaption>
+                        <h4>Restaurant</h4>
+                    </figcaption>
+                </figure> 
+            </div>
+            <div>
+                <figure>
+                    <img src="images/Meeting_room.webp" alt="">
+                    <figcaption>
+                        <h4>Meeting Room</h4>
+                    </figcaption>
+                </figure> 
+            </div>
+            <div>
+                <figure>
+                    <img src="images/gym.webp" alt="">
+                    <figcaption>
+                        <h4>Gym</h4>
+                    </figcaption>
+                </figure> 
+            </div>
+            <div>
+                <figure>
+                    <img src="images/bar.webp" alt="">
+                    <figcaption>
+                        <h4>Bar</h4>
+                    </figcaption>
+                </figure> 
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="f_column">
+         <p class="footer_Headings">Our Rating</p> 
+         <p>
+             <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+             <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+             <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+             <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+             <i class="fa-solid fa-star-half-stroke" style="color: #d29d00;"></i>
+         </p>
+         <p> Based on <u><i>2303 reviews</i></u></p>
+        </div>
+
+        <div class="f_column">
+         <p>
+             <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+             <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+             <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+             <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+             <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+         </p>
+         <p class="footer_Headings">Great Quality and Value</p>
+         <p>Comfortable bed, great staff, proximate to the hospital, will stay here again</p>
+         <p class="comment_owner">John doe, 6 days ago</p>
+        </div>
+
+        <div class="f_column">
+         <p>
+             <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+             <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+             <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+             <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+             <i class="fa-regular fa-star" style="color: #d29d00;"></i>
+         </p>
+         <p class="footer_Headings">Beautiful Design</p>
+         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+             Nulla quam velit...</p>
+         <p class="comment_owner">Travis Cooper, 8 days ago</p>
+        </div>
+
+        <div class="f_column">
+         <p class="footer_Headings">Our Location</p>
+         <p>University of East Anglia
+             Norwich Research Park 
+             Norwich
+             NR4 7TJ Tel:</p>
+         <p class="tel">Tel: +44 (0)1603 456161</p>
+        </div>
+
+        <div class="f_column">
+         <p>
+             <i class="fa-brands fa-instagram" style="color: #d29d00;"></i>
+             <i class="fa-brands fa-youtube" style="color: #d29d00;"></i>
+             <i class="fa-brands fa-facebook" style="color: #d29d00;"></i>
+             <i class="fa-brands fa-x-twitter" style="color: #d29d00;"></i>
+         </p>
+         <p class="footer_Headings">Need Help?</p>
+
+         <button class="contact_Button">
+             <a href="Contact.html">Contact us</a>
+         </button>
+
+        </div>
+     </footer>
+</body>
+</html>

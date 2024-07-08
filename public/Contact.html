@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crown Hotel</title>
+    <link rel="stylesheet" href="contact.css">
+    <script src="https://kit.fontawesome.com/f8404fde77.js" crossorigin="anonymous"></script>
+    <script src="chevron.js" defer></script>
+    <script src="contact.js" defer></script>
+    </head>
+<body>
+    <div id="wrapper"></div>
+    <header>
+        <p>Welcome to Crown Hotel! No booking fees. Booking with us today!</p>
+        <div>
+            <div class="h1">Crown Hotel
+                <a id="chevron">
+                    <i class="fa-solid fa-circle-chevron-right"></i>
+                </a>
+            </div>
+            <div class="h1">
+                <form>
+                    <label for="search"></label>
+                    <input type="text" name="search"  id="search" placeholder="Search">
+                </form>
+            </div>
+            <div class="h1">
+                <ul class="login">
+                    <li id="loginicon"><a href="logincus.html"><i class="fa-regular fa-user"></i></a></li>
+                    <li id="login"><a href="logincus.html"><small>Login</small></a></li>
+                    <li><a href="booking_card.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                </ul>
+            </div>        
+        </div>
+    </header>
+    <nav id="mainNav">        
+        <ul class="mainNav">
+            <li class="nav"><a href="Home.html">Home</a></li>
+            <Li class="nav"><a href="Rooms.html">Our Rooms</a></Li>
+            <Li class="nav"><a href="Facilities.html">Our Facilities</a></Li>
+            <Li class="nav active"><a href="Contact.html">Our Location</a></Li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="Location">
+            <div>
+                <h3>Our Location</h3>
+                <figure>
+                    <img src="images/location.png" alt="">
+                </figure>
+                <p>Proximate to Norfolk and Norwich University Hospital, we are located in the beautiful campus of Norwich Research Park, with eacy access to University of East Anglia.<br><br> <b>Our Address:</b><br> Norwich Research Park <br>Norwich NR4 7TJ<br>
+                    Tel: +44 (0)1603 456161</p>
+            </div>
+            <div>
+                <p class="form">Required information is marked with an asterisk (*)</p>
+                <form action = "/contact"  method = "post" id="form">
+                    <fieldset>
+                        <legend>Contact Us
+                            <a id="message">
+                                <i class="fa-solid fa-message"></i>
+                            </a>  
+                        </legend>                                                      
+                        <label>Name*:</label>
+                        <input type="text" name="name" required>
+                        <label>Email*:</label>
+                        <a id="email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                        <input type="text" name="email" required>
+                        <label>Message*:</label>                    
+                        <textarea name="message" rows="3" cols="30" aria-required></textarea>
+                        <button id="submit">Send
+                            <a>
+                                <i class="fa-solid fa-angles-right" style="color:white;"></i>
+                            </a>
+                        </button>                
+                    </fieldset>
+                 </form>
+                 <p id="response"></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="f_column">
+         <p class="footer_Headings">Our Rating</p> 
+         <p>
+             <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+             <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+             <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+             <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+             <i class="fa-solid fa-star-half-stroke" style="color: #d29d00;"></i>
+         </p>
+         <p> Based on <u><i>2303 reviews</i></u></p>
+        </div>
+
+        <div class="f_column">
+         <p>
+             <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+             <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+             <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+             <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+             <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+         </p>
+         <p class="footer_Headings">Great Quality and Value</p>
+         <p>Comfortable bed, great staff, proximate to the hospital, will stay here again</p>
+         <p class="comment_owner">John doe, 6 days ago</p>
+        </div>
+
+        <div class="f_column">
+         <p>
+             <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+             <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+             <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+             <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+             <i class="fa-regular fa-star" style="color: #d29d00;"></i>
+         </p>
+         <p class="footer_Headings">Beautiful Design</p>
+         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+             Nulla quam velit...</p>
+         <p class="comment_owner">Travis Cooper, 8 days ago</p>
+        </div>
+
+        <div class="f_column">
+         <p class="footer_Headings">Our Location</p>
+         <p>University of East Anglia
+             Norwich Research Park 
+             Norwich
+             NR4 7TJ Tel:</p>
+         <p class="tel">Tel: +44 (0)1603 456161</p>
+        </div>
+
+        <div class="f_column">
+         <p>
+             <i class="fa-brands fa-instagram" style="color: #d29d00;"></i>
+             <i class="fa-brands fa-youtube" style="color: #d29d00;"></i>
+             <i class="fa-brands fa-facebook" style="color: #d29d00;"></i>
+             <i class="fa-brands fa-x-twitter" style="color: #d29d00;"></i>
+         </p>
+         <p class="footer_Headings">Need Help?</p>
+
+         <button class="contact_Button">
+             <a href="Contact.html">Contact us</a>
+         </button>
+
+        </div>
+     </footer>
+</body>
+</html>

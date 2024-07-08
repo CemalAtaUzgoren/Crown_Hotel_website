@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+         <title>My Basket</title>
+         <meta charset="utf-8">
+         <link rel="stylesheet" href="booking_card.css">
+         <script src="https://kit.fontawesome.com/67bd86ffdc.js" crossorigin="anonymous"></script>
+         
+        </head>
+    <body>
+        
+        <header>
+
+           <div class="heading_basket">
+            <h1>Crown Hotel (My Basket <i class="fa-solid fa-cart-shopping" style="color: #d29d00;"></i>)</h1>
+            <a href="Home.html" class="home">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to Home Page
+            </a>
+            <a href="Rooms.html" class="home">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to Rooms Page
+            </a>
+          </div>
+
+          <div class="account_heading">
+            <a href="Logincus.html" class="id">
+                <i class="fa-solid fa-address-card" style="color: #d29d00;"></i> My Account
+            </a>
+          </div>
+        </header>
+
+        <main>
+            <div class="innerDiv12" id="empty">
+                <h2>Your Basket is Empty</h2>
+                <p><i class="fa-solid fa-circle-xmark fa-beat fa-lg" style="color: #9929bd;"></i></i></p>
+            </div>
+
+            <div class="room_sum">
+                <div class="innerDiv1" >
+                    <div>
+                        <img id="img1" class="roomPictures" src="" alt="">
+                    </div>
+                    <div>
+                        <p id="p1" class="roomInfo"></p>
+                        <input type="radio" id="breakfast" class="rad" value="10"  onclick="extrasButton('breakfast','counter','extrasPrice',0)">
+                            <label for="breakfast">Breakfast(10£/Night)</label><br>
+                           
+                            <input type="radio" id="dinner" class="rad" value="20" onclick="extrasButton('dinner','counter','extrasPrice',1)">
+                            <label for="dinner">Dinner(20£/Night)</label><br>
+
+                            <input type="radio" id="lunch" class="rad" value="20" onclick="extrasButton('lunch','counter','extrasPrice',2)">
+                            <label for="lunch">Lunch(20£/Night)</label><br>
+                    </div>
+                    <div class="qtyDiv">
+                        <p id="p2"></p>
+                        <form action="">
+                            <input type="number" id="quantity1" class="quan" oninput="quantity('quantity1',0)">
+                        </form>
+                    </div>
+                    <div class="dates">
+                        <p id="p4_in"></p>
+                        <p id="p4_out"></p>
+                    </div>
+                    <div class="qtyDiv">
+                        <p id="p3"></p>
+                        <button class="remove" onclick="
+                        const roomObject =JSON.parse(localStorage.getItem('cartobject'));
+                        roomObject[0].qty=0;
+                        console.log(roomObject)
+                        localStorage.setItem('cartobject',JSON.stringify(roomObject));
+                        location.reload();
+                        ">Remove</button>
+                    </div>
+                </div>
+
+                <div class="innerDiv2">
+                    <div>
+                        <img id="img2" class="roomPictures" src="" alt="">
+                    </div>
+                    <div>
+                        <p id="p12" class="roomInfo"></p>
+                        <input type="radio" id="breakfast2" class="rad" value="10"  onclick="extrasButton('breakfast2','counter','extrasPrice2',3)">
+                            <label for="breakfast">Breakfast(10£/Night)</label><br>
+                           
+                            <input type="radio" id="dinner2" class="rad" value="20" onclick="extrasButton('dinner2','counter','extrasPrice2',4)">
+                            <label for="dinner">Dinner(20£/Night)</label><br>
+
+                            <input type="radio" id="lunch2" class="rad" value="20" onclick="extrasButton('lunch2','counter','extrasPrice2',5)">
+                            <label for="lunch">Lunch(20£/Night)</label><br>
+                    </div>
+                    <div class="qtyDiv">
+                        <p id="p22"></p>
+                        <form action="">
+                            <input type="number" id="quantity2" class="quan" oninput="quantity('quantity2',1)">
+                        </form>
+                    </div>
+                    <div class="dates">
+                        <p id="p42_in"></p>
+                        <p id="p42_out"></p>
+                    </div>
+                    <div class="qtyDiv">
+                        <p id="p32"></p>
+                        <button class="remove" onclick="
+                        const roomObject =JSON.parse(localStorage.getItem('cartobject'));
+                        roomObject[1].qty=0;
+                        console.log(roomObject)
+                        localStorage.setItem('cartobject',JSON.stringify(roomObject));
+                        location.reload();
+                        ">Remove</button>
+                    </div>
+                </div>
+
+                <div class="innerDiv3">
+                    <div>
+                        <img id="img3" class="roomPictures" src="" alt="">
+                    </div>
+                    <div>
+                        <p id="p13" class="roomInfo"></p>
+                        <input type="radio" id="breakfast3" class="rad" value="10"  onclick="extrasButton('breakfast3','counter','extrasPrice3',6)">
+                        <label for="breakfast">Breakfast(10£/Night)</label><br>
+                       
+                        <input type="radio" id="dinner3" class="rad" value="20" onclick="extrasButton('dinner3','counter','extrasPrice3',7)">
+                        <label for="dinner">Dinner(20£/Night)</label><br>
+
+                        <input type="radio" id="lunch3" class="rad" value="20" onclick="extrasButton('lunch3','counter','extrasPrice3',8)">
+                        <label for="lunch">Lunch(20£/Night)</label><br>
+
+                    </div>
+                    <div class="qtyDiv">
+                        <p id="p23"></p>
+                        <form action="">
+                            <input type="number" id="quantity3" class="quan" oninput="quantity('quantity3',2)">
+                        </form>
+                    </div>
+                    <div class="dates">
+                        <p id="p43_in"></p>
+                        <p id="p43_out"></p>
+                    </div>
+                    <div class="qtyDiv">
+                        <p id="p33"></p>
+                        <button class="remove" onclick="
+                        const roomObject =JSON.parse(localStorage.getItem('cartobject'));
+                        roomObject[2].qty=0;
+                        console.log(roomObject)
+                        localStorage.setItem('cartobject',JSON.stringify(roomObject));
+                        location.reload();
+                        ">Remove</button>
+                    </div>
+                </div>
+
+                <div class="innerDiv4">
+                    <div>
+                        <img id="img4" class="roomPictures" src="" alt="">
+                    </div>
+                    <div>
+                        <p id="p14" class="roomInfo"></p>
+                        <input type="radio" id="breakfast4" class="rad" value="10"  onclick="extrasButton('breakfast4','counter','extrasPrice4',9)">
+                            <label for="breakfast">Breakfast(10£/Night)</label><br>
+                           
+                            <input type="radio" id="dinner4" class="rad" value="20" onclick="extrasButton('dinner4','counter','extrasPrice4',10)">
+                            <label for="dinner">Dinner(20£/Night)</label><br>
+
+                            <input type="radio" id="lunch4" class="rad" value="20" onclick="extrasButton('lunch4','counter','extrasPrice4',11)">
+                            <label for="lunch">Lunch(20£/Night)</label><br>
+                    </div>
+                    <div class="qtyDiv">
+                        <p id="p24"></p>
+                        <form action="">
+                            <input type="number" id="quantity4" class="quan" oninput="quantity('quantity4',3)">
+                        </form>
+                    </div>
+                    <div class="dates">
+                        <p id="p44_in"></p>
+                        <p id="p44_out"></p>
+                    </div>
+                    <div class="qtyDiv">
+                        <p id="p34"></p>
+                        <button class="remove" onclick="
+                        const roomObject =JSON.parse(localStorage.getItem('cartobject'));
+                        roomObject[3].qty=0;
+                        console.log(roomObject)
+                        localStorage.setItem('cartobject',JSON.stringify(roomObject))
+                        location.reload();
+                        ">Remove</button>
+                    </div>
+                </div>
+                
+               
+               
+                
+            </div>
+            
+            <div class="total_cost">
+              <div id="innerCostDiv">
+                    <p class="cost"> TOTAL COST : </p>
+                    <p class="num_cost">£0/Night</p>
+                    <button class="book_button">
+                        <a href="payment_card.html">Continue to Payment</a>
+                    </button>
+              </div>
+            </div>
+        </main>
+
+        <footer>
+           <div class="f_column">
+            <p class="footer_Headings">Our Rating</p> 
+            <p>
+                <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+                <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+                <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+                <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+                <i class="fa-solid fa-star-half-stroke" style="color: #d29d00;"></i>
+            </p>
+            <p> Based on 2303 views</p>
+           </div>
+
+           <div class="f_column">
+            <p>
+                <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+                <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+                <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+                <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+                <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+            </p>
+            <p class="footer_Headings">Great Quality and Value</p>
+            <p>Comfortable bed, great staff, proximate to the hospital, will stay here again</p>
+            <p class="comment_owner">John doe, 6 days ago</p>
+           </div>
+
+           <div class="f_column">
+            <p>
+                <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+                <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+                <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+                <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+                <i class="fa-regular fa-star" style="color: #d29d00;"></i>
+            </p>
+            <p class="footer_Headings">Beautiful Design</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nulla quam velit...</p>
+            <p class="comment_owner">Travis Cooper, 8 days ago</p>
+           </div>
+
+           <div class="f_column">
+            <p class="footer_Headings">Our Location</p>
+            <p>University of East Anglia
+                Norwich Research Park 
+                Norwich
+                NR4 7TJ Tel:</p>
+            <p class="tel">Tel: +44 (0)1603 456161</p>
+           </div>
+
+           <div class="f_column">
+            <p>
+                <i class="fa-brands fa-instagram" style="color: #d29d00;"></i>
+                <i class="fa-brands fa-youtube" style="color: #d29d00;"></i>
+                <i class="fa-brands fa-facebook" style="color: #d29d00;"></i>
+                <i class="fa-brands fa-x-twitter" style="color: #d29d00;"></i>
+            </p>
+            <p class="footer_Headings">Need Help?</p>
+
+            <button class="contact_Button">
+                <a href="contact.html">Contact us</a>
+            </button>
+
+           </div>
+        </footer>
+
+         <script>
+            //localStorage.setItem('counter',JSON.stringify([1,1,1,1,1,1,1,1,1,1,1,1]));
+            if(!(localStorage.getItem('counter'))){
+               localStorage.setItem('counter',JSON.stringify([1,1,1,1,1,1,1,1,1,1,1,1]));
+            }
+            if(!(localStorage.getItem('extrasPrice4'))){
+            localStorage.setItem('extrasPrice4',0)
+            }
+            if(!(localStorage.getItem('extrasPrice3'))){
+            localStorage.setItem('extrasPrice3',0)
+            }
+            if(!(localStorage.getItem('extrasPrice2'))){
+            localStorage.setItem('extrasPrice2',0)
+            }
+            if(!(localStorage.getItem('extrasPrice'))){
+            localStorage.setItem('extrasPrice',0)
+            }
+            function extrasButton(id,counter,extra,i){
+                const radio = document.getElementById(id);
+                    let exprice=JSON.parse(localStorage.getItem(extra));
+                    let update =JSON.parse(localStorage.getItem(counter))
+                             if(radio.checked===true && update[i]%2===0){
+                                console.log('in')
+                                radio.checked = false;
+                                exprice-=parseFloat(radio.value);
+                                localStorage.setItem(extra,JSON.stringify(exprice));
+
+                                update[i]+=1;
+                                localStorage.setItem(counter,JSON.stringify(update));
+                                console.log(update)
+                                console.log(localStorage.getItem(extra,JSON.stringify(exprice)))
+                             }else{
+                             
+                             console.log(update)
+                             update[i]+=1;
+                             console.log(update)
+                             localStorage.setItem(counter,JSON.stringify(update));
+
+                             exprice+=parseFloat(radio.value);
+                             localStorage.setItem(extra,JSON.stringify(exprice));
+
+                             console.log(localStorage.getItem(extra,JSON.stringify(exprice)))
+                             }
+                             location.reload();
+            }
+            
+            addEventListener('DOMContentLoaded',function(){
+                document.getElementById('quantity1').value=(JSON.parse(localStorage.getItem('cartobject')))[0].qty;
+                document.getElementById('quantity2').value=(JSON.parse(localStorage.getItem('cartobject')))[1].qty;
+                document.getElementById('quantity3').value=(JSON.parse(localStorage.getItem('cartobject')))[2].qty;
+                document.getElementById('quantity4').value=(JSON.parse(localStorage.getItem('cartobject')))[3].qty;
+
+                const radioBut=document.getElementsByClassName('rad');
+                console.log(radioBut)
+                for(let k=0;k<radioBut.length;k++){
+                    if(JSON.parse(localStorage.getItem('counter'))[k]%2===0){
+                                console.log('in')
+                                radioBut[k].checked = true;
+                            
+                             }
+                }
+
+                console.log((parseFloat(localStorage.getItem('extrasPrice'))))
+
+
+                const objectShared=JSON.parse(localStorage.getItem('cartobject'));
+                 console.log(objectShared)
+            var sum=0;
+            if(objectShared[0].qty!==0){
+                try{
+                   const photo1=objectShared[0].img;
+                   const info1=objectShared[0].name;
+                   const price1=objectShared[0].price+(parseFloat(localStorage.getItem('extrasPrice')));
+                   const quantity1=objectShared[0].qty;
+                   const date_in =objectShared[0].checkin;
+                   const date_out = objectShared[0].checkout;
+
+                    const div1=document.querySelector('.innerDiv1');
+                    console.log(div1)
+                    div1.classList.add('innerDiv0');
+                    div1.classList.remove('innerDiv1');
+
+                    document.getElementById('img1').src=photo1;
+                    document.getElementById('p1').innerHTML=info1;
+                    document.getElementById('p2').innerHTML=`Quantity ${quantity1}`;
+                    document.getElementById('p3').innerHTML=`Price: ${price1} £/Night`;
+                    document.getElementById('p4_in').innerHTML=`Check-in date \n${date_in} \n`;
+                    document.getElementById('p4_out').innerHTML=`Check-out date \n${date_out} \n`;
+                    sum+=(price1*quantity1);
+                 
+                }catch{
+                    console.log('You have not booked this room')
+                }
+            }
+             if(objectShared[1].qty!==0){
+                
+                try{
+                    const photo12=objectShared[1].img;
+                    const info12=objectShared[1].name;
+                    const price12=objectShared[1].price+(parseFloat(localStorage.getItem('extrasPrice2')));
+                    const quantity12=objectShared[1].qty;
+                    const date_in12 =objectShared[1].checkin;
+                    const date_out12 = objectShared[1].checkout;
+
+                    const div1=document.querySelector('.innerDiv2');
+                    div1.classList.add('innerDiv0');
+                    div1.classList.remove('innerDiv2');
+                    document.getElementById('img2').src=photo12;
+                    document.getElementById('p12').innerHTML=info12;
+                    document.getElementById('p22').innerHTML=`Quantity ${quantity12}`;
+                    document.getElementById('p32').innerHTML=`Price: ${price12} £/Night`;
+                    document.getElementById('p42_in').innerHTML=`Check-in date \n${date_in12} \n`;
+                    document.getElementById('p42_out').innerHTML=`Check-out date \n${date_out12} \n`;
+                    sum+=(price12*quantity12);
+                }catch{
+                    console.log('You have not booked this room')
+                }
+            }
+             if(objectShared[2].qty!==0){
+                    
+                try{
+                    const photo13=objectShared[2].img;
+                    const info13=objectShared[2].name;
+                    const price13=objectShared[2].price+(parseFloat(localStorage.getItem('extrasPrice3')));
+                    const quantity13=objectShared[2].qty;
+                    const date_in13 =objectShared[2].checkin;
+                    const date_out13 = objectShared[2].checkout;
+                    const div1=document.querySelector('.innerDiv3');
+                    div1.classList.add('innerDiv0');
+                    div1.classList.remove('innerDiv3');
+                    document.getElementById('img3').src=photo13;
+                    document.getElementById('p13').innerHTML=info13;
+                    document.getElementById('p23').innerHTML=`Quantity ${quantity13}`;
+                    document.getElementById('p33').innerHTML=`Price: ${price13} £/Night`;
+                    document.getElementById('p43_in').innerHTML=`Check-in date \n${date_in13} \n`;
+                    document.getElementById('p43_out').innerHTML=`Check-out date \n${date_out13} \n`;
+                    sum+=(price13*quantity13);
+                }catch{
+                    console.log('You have not booked this room')
+                }
+
+                const objectShared4=JSON.parse(localStorage.getItem('sharedData4'));
+            }
+             if(objectShared[3].qty!==0){
+              
+               try{
+                    const photo14=objectShared[3].img;
+                    const info14=objectShared[3].name;
+                    const price14=objectShared[3].price+(parseFloat(localStorage.getItem('extrasPrice4')));
+                    const quantity14=objectShared[3].qty;
+                    const date_in14 =objectShared[3].checkin;
+                    const date_out14 = objectShared[3].checkout;
+                    const div1=document.querySelector('.innerDiv4');
+                    div1.classList.add('innerDiv0');
+                    div1.classList.remove('innerDiv4');
+                    document.getElementById('img4').src=photo14;
+                    document.getElementById('p14').innerHTML=info14;
+                    document.getElementById('p24').innerHTML=`Quantity ${quantity14}`;
+                    document.getElementById('p34').innerHTML=`Price: ${price14} £/Night`;
+                    document.getElementById('p44_in').innerHTML=`Check-in date \n${date_in14} \n`;
+                    document.getElementById('p44_out').innerHTML=`Check-out date \n${date_out14} \n`;
+                    sum+=(price14*quantity14);
+                }catch{
+                    console.log('You have not booked this room')
+                }
+            }
+                if(objectShared[0].qty===0 && objectShared[1].qty===0 && objectShared[2].qty===0 && objectShared[3].qty===0){
+                   const costDiv=document.getElementById('innerCostDiv');
+                   const empty = document.getElementById('empty');
+                   costDiv.classList.add('innerDiv1');
+
+                   empty.classList.add('emptyBasket');
+                   empty.classList.remove('innerDiv12');
+                }else{
+                    const costDiv=document.getElementById('innerCostDiv');
+                    const empty = document.getElementById('empty')
+                   costDiv.classList.remove('innerDiv1');
+                   empty.classList.add('innerDiv12');
+                   empty.classList.remove('emptyBasket');
+                }
+                const total=document.querySelector('.num_cost')
+                total.innerHTML=` £${sum}/Night`;
+              }
+
+            )
+            function quantity(id,i){
+                const input= document.getElementById(id);
+                const value = input.value;
+                if(value<=((JSON.parse(localStorage.getItem('cartobject')))[i].availability)){
+                const roomObject =JSON.parse(localStorage.getItem('cartobject'));
+                roomObject[i].qty=parseFloat(value);
+                console.log(roomObject)
+                localStorage.setItem('cartobject',JSON.stringify(roomObject));  
+                }else{
+                    alert("Your room quantity is over its availability. Please change.")
+                }              
+            }
+                 
+
+            
+         </script>
+
+    </body>
+</html>

@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family:sans-serif;
+}
+
+html {
+    background-color: #bcc3b6;
+}
+
+header {
+    background-color: goldenrod;
+}
+
+header p {
+    display:block;
+    text-align: center;
+    font-size: medium;
+    padding: 5px;
+    height: 100%;
+}
+
+header div {
+    display: flex;
+    padding: 0 10px 10px;
+    height: 100%;
+    
+}
+
+.h1 {
+    width: 33%;
+    line-height: 100%;
+    display: block;
+    padding: 7px;
+    position:relative;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+header input {
+    padding:5px;
+    width: 95%;
+    border-radius: 10px;
+    border-color:black;    
+}
+
+.login {
+    float: right;
+    list-style-type: none;
+    display: flex;
+    padding: 5px;
+}
+
+.countqty {
+    position:absolute;
+    top: 0;
+    right: 0;
+    font-size: 14px;
+    color:white;
+    background-color:#B8195A;
+    padding: 0 5px;
+    border-radius: 30px;
+}
+
+#q2 {
+
+    padding: 0 5px;
+    border-radius: 30px;
+    margin-top:-45px;
+    margin-right:auto;
+    position:fixed;
+    z-index: 0;
+}
+
+#cart {
+    position:fixed;
+    margin-top: 150px;
+    margin-left: 92.3%;
+    font-size: 32px;
+    font-weight: bold;
+
+}
+
+#cart a:hover {
+    font-size:larger;
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+        
+}
+
+a:link a:visited {
+    color:#3F2860;}
+
+nav a:hover {
+    background-color:goldenrod;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav {
+    display: block;
+    padding: 15px;
+}
+
+.nav {
+    display: inline-block;
+    text-align: center;
+    padding: 5px 15px;
+}
+
+.active {
+    border-bottom: 2px solid #573A56;
+    font-weight: bold;
+}
+
+#chat {
+    position: fixed;
+    margin-left: 92.5%;
+    margin-top: 90px;
+    font: 32px bold;
+}
+
+#chat a:hover {
+    font-size: larger;
+}
+
+#results {
+    color:#573A56;
+    display: inline-block;
+    margin: 10px;
+}
+
+main section {
+    margin: auto 10%;
+    padding: 16px;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+
+fieldset {
+    border: none;
+    margin: 5px;
+    padding: 5px;
+
+}
+
+input {
+    border-radius: 5px;
+    border: black solid;
+    padding: 5px;
+    margin: 5px;
+}
+
+.qty {
+    width: 30px;
+}
+
+section div{
+    padding: 1%;
+    margin: 1%;    
+    display: inline-block;
+    width:45%;
+    text-align: left;
+    flex-wrap: wrap;
+}
+
+img {
+    width: 100%;
+    height: fit-content;
+    border-radius: 10px;
+}
+
+div figure {
+    margin: 0;
+}
+
+
+button {
+    display: inline-block;
+    background-color: #B8195A;
+    color: white;
+    text-transform: uppercase;
+    padding: 6px 10px;
+    font-weight: 700;
+    font-size: 16px;
+    Border: 2px solid #B8195A;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 5px 3px;
+}
+
+
+#price {
+    color:#573A56;
+    font-size: large;
+}
+
+#availability {
+    color:#B8195A;
+}
+
+.amenity {
+    height: 0;
+    overflow:hidden;
+}
+
+.showNav {
+    height: fit-content;
+    display: block;
+    list-style-type:circle;
+    z-index: 0;
+}
+
+.media {
+    display: flex;
+    list-style-type: none;
+}
+
+footer{
+    padding: 10px 20px;
+    margin: 10px auto auto;
+    height: auto;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border: 3px solid  ;
+    border-color:#bcc3b6;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);/* footer allocated to 5 columns*/
+}
+
+.f_column{
+    text-align: center;
+}
+
+.footer_Headings{
+    font-weight: bold;
+}
+
+.comment_owner{
+    font-size: 12px;
+}
+.tel{
+     text-decoration:underline ;
+}
+
+.fa-brands{
+    margin-left: 20px;
+}
+
+.contact_Button{
+    background-color:goldenrod;
+    border-color:goldenrod;
+    border-radius: 5px;
+    width: 130px;
+    height: 30px;
+}
+.contact_Button a{
+    text-decoration: none;
+    color: black;
+}
+
+
+@media only screen and (max-width:768px) {
+    header {
+        font-size:small;
+    }
+
+    #login {
+        display: none;
+    }
+
+    .mainNav{
+        height: 0;
+        overflow:hidden;
+    }
+
+    .showNav{
+        height: fit-content;
+        background-color: #bcc3b6;
+    }
+
+    section div{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .f_column{
+        font: 5px;
+    }
+
+}

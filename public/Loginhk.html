@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>    
+    <link rel="stylesheet" href="Login.css">
+    <script src="https://kit.fontawesome.com/07c22d3770.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>Crown Hotel</h1>
+        <nav id="mainNav">
+            <ul>
+                <b>
+                    <li class="nav"><a href="Index.html">Home</a></li>
+                    <li class="nav"><a href="Rooms.html">Our Rooms</a></li>
+                    <li class="nav"><a href="Facilities.html">Our Facilities</a></li>
+                    <li class="nav"><a href="Contact.html">Our Location</a></li>
+                </b>
+            </ul>
+        </nav>
+    </header>
+    <!-- <div class="Account"><i class="fa-solid fa-user"></i>  Account</div> -->
+    <main>
+        <div class="log">
+            <h1 style="margin-bottom: 10px;">Log In</h2>
+            <p>Check your booking by entering your email address and password.</p>
+            <h2 id="results"></h2>
+        </div>
+        <div class="email">
+            <form action="/loginhk" method="post">
+            <label for="email">Email Address</label>
+                <input type="text" id="email" name="email" required>
+            <label for="ref">Password</label>
+                <input type="password" id="ref" name="ref" required>
+            <div class="forgot"><a href="Contact.html">Forgot Password?</a></div>
+            <button type="submit" class="BL" style="border-radius: 5px;">Login</button>
+            </form>
+
+            <div class="forgot">New customer?</div>
+            <button class="new" style="margin-bottom: 20px;border: 2px solid #e3e3e3; border-radius: 10px;"><a href="Home.html">Book Now</a></button>
+        </div>
+    </main>
+    <footer>
+        <div class="f_column">
+         <p class="footer_Headings">Our Rating</p> 
+         <p>
+             <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+             <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+             <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+             <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+             <i class="fa-solid fa-star-half-stroke" style="color: #d29d00;"></i>
+         </p>
+         <p> Based on 2303 views</p>
+        </div>
+    
+        <div class="f_column">
+         <p>
+             <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+             <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+             <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+             <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+             <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+         </p>
+         <p class="footer_Headings">Great Quality and Value</p>
+         <p>Comfortable bed, great staff, proximate to the hospital, will stay here again</p>
+         <p class="comment_owner">John doe, 6 days ago</p>
+        </div>
+    
+        <div class="f_column">
+         <p>
+             <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+             <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+             <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+             <i class="fa-solid fa-star" style="color: #d29d00;"></i>
+             <i class="fa-regular fa-star" style="color: #d29d00;"></i>
+         </p>
+         <p class="footer_Headings">Beautiful Design</p>
+         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+             Nulla quam velit...</p>
+         <p class="comment_owner">Travis Cooper, 8 days ago</p>
+        </div>
+    
+        <div class="f_column">
+         <p class="footer_Headings">Our Location</p>
+         <p>University of East Anglia
+             Norwich Research Park 
+             Norwich
+             NR4 7TJ Tel:</p>
+         <p class="tel">Tel: +44 (0)1603 456161</p>
+        </div>
+    
+        <div class="f_column">
+         <p>
+             <i class="fa-brands fa-instagram" style="color: #d29d00;"></i>
+             <i class="fa-brands fa-youtube" style="color: #d29d00;"></i>
+             <i class="fa-brands fa-facebook" style="color: #d29d00;"></i>
+             <i class="fa-brands fa-x-twitter" style="color: #d29d00;"></i>
+         </p>
+         <p class="footer_Headings">Need Help?</p>
+    
+         <button class="contact_Button">
+             <a href="contact.html">Contact us</a>
+         </button>
+    
+        </div>
+     </footer>
+    </body>
+    </html>
